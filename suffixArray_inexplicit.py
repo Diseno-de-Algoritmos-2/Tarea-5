@@ -64,6 +64,7 @@ def main():
     
     # Lee el texto desde el archivo 'input.txt'
     text = read_text('input.txt')
+    
     # Construye el arreglo de sufijos para el texto leído
     suffix_array = build_suffix_array(text)
     

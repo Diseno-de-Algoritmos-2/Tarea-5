@@ -102,11 +102,31 @@ python suffixArray_inexplicit.py
 
 4. **Análisis Experimental**:
 
+   Los resultados experimentales se obtuvieron ejecutando 30 iteraciones para cada combinación de tamaño de texto y número de consultas:
+
    | Tamaño del Texto | Número de Consultas | Tiempo (Implícito) | Tiempo (Explícito) |
    | ---------------- | ------------------- | ------------------ | ------------------ |
-   | 100000           | 1000                | 0.00000 seconds    | 0.01028 seconds    |
-   | 1000000          | 10000               | 0.00719 seconds    | 0.00603 seconds    |
-   | 10000000         | 100000              | 0.01140 seconds    | 0.00690 seconds    |
+   | 100000           | 1000                | 0.00186s           | 0.00349s           |
+   | 100000           | 10000               | 0.00219s           | 0.00212s           |
+   | 100000           | 100000              | 0.00213s           | 0.00254s           |
+   | 1000000          | 1000                | 0.00252s           | 0.00225s           |
+   | 1000000          | 10000               | 0.00277s           | 0.00206s           |
+   | 1000000          | 100000              | 0.00233s           | 0.00241s           |
+   | 10000000         | 1000                | 0.00204s           | 0.00259s           |
+   | 10000000         | 10000               | 0.00236s           | 0.00264s           |
+   | 10000000         | 100000              | 0.00184s           | 0.00270s           |
+
+   **Observaciones**:
+
+   - Los tiempos de ejecución son muy similares entre ambas implementaciones
+   - La versión implícita muestra tiempos más consistentes a través de diferentes tamaños de entrada
+   - La versión explícita tiende a ser ligeramente más lenta con textos más grandes.
+
+   NOTA: Todo los escenarios de prueba se pueden observar en la carpeta **Pruebas** junto con el generador de instancias, y la respectiiva simulación de Monte Carlo en run_test.py
+
+   **Conlusión**:
+
+   Una conclusión interesante es que hacerlo implícito solo nos ahorra en espacio en memoria, no en tiempo de procesamiento de la consulta.
 
 ## **Instalación/Configuración**
 
