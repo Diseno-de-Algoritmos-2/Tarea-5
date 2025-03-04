@@ -1,0 +1,3 @@
+Writing results to 'input_10000000.txt'.
+
+Execution time: 0.01140 seconds
